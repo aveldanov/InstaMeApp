@@ -19,7 +19,7 @@ class FeedController: UICollectionViewController{
      //MARK: Helpers
     
     func configureUI(){
-        view.backgroundColor = .white
+        collectionView.backgroundColor = .white
 
     }
     
