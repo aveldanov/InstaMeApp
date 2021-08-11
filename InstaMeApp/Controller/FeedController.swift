@@ -52,7 +52,11 @@ extension FeedController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 200)
+        let width = view.frame.width
+        var height = width+8+40+8 //top part with round image and padding
+        height+=50 //image
+        height+=60 //bottom (likes etc)
+        return CGSize(width: width, height: height)
     }
     
     
