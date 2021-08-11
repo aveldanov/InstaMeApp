@@ -19,6 +19,8 @@
 		219B82D926C22D090069D674 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82D826C22D090069D674 /* ImageSelectorController.swift */; };
 		219B82DB26C22D170069D674 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82DA26C22D170069D674 /* NotificationsController.swift */; };
 		219B82DD26C22D260069D674 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82DC26C22D260069D674 /* ProfileController.swift */; };
+		219B82DF26C34E5C0069D674 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82DE26C34E5C0069D674 /* FeedCell.swift */; };
+		219B82E126C34F530069D674 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82E026C34F530069D674 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		219B82D826C22D090069D674 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		219B82DA26C22D170069D674 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		219B82DC26C22D260069D674 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		219B82DE26C34E5C0069D674 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		219B82E026C34F530069D674 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		219B82CD26C22B1A0069D674 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				219B82DE26C34E5C0069D674 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		219B82D126C22B390069D674 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				219B82E026C34F530069D674 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				219B82BD26C22A0F0069D674 /* ViewController.swift in Sources */,
+				219B82DF26C34E5C0069D674 /* FeedCell.swift in Sources */,
 				219B82D926C22D090069D674 /* ImageSelectorController.swift in Sources */,
 				219B82DB26C22D170069D674 /* NotificationsController.swift in Sources */,
 				219B82D726C22CFC0069D674 /* SearchController.swift in Sources */,
@@ -211,6 +218,7 @@
 				219B82DD26C22D260069D674 /* ProfileController.swift in Sources */,
 				219B82D526C22CEF0069D674 /* FeedController.swift in Sources */,
 				219B82D326C22BC10069D674 /* MainTabController.swift in Sources */,
+				219B82E126C34F530069D674 /* Extensions.swift in Sources */,
 				219B82BB26C22A0F0069D674 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
