@@ -43,28 +43,20 @@ class LoginController: UIViewController{
         return button
     }()
     
-    private let dontHaveAccountButton: UIButton = {
-        let button = UIButton(type: .system)
-         button.setTitle("Login", for: .normal)
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
-        let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: atts)
-        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: boldAtts))
-        button.setAttributedTitle(attributedTitle, for: .normal)
-         return button
-    }()
-    
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
-         button.setTitle("Login", for: .normal)
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
-        let attributedTitle = NSMutableAttributedString(string: "Forgot your password? ", attributes: atts)
-        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
-        attributedTitle.append(NSAttributedString(string: "Get help signing in.", attributes: boldAtts))
-        button.setAttributedTitle(attributedTitle, for: .normal)
-         return button
+        button.attributedTitle(firstPart: "Forgot your password?", secondPart: "Get help signing in.")
+        return button
     }()
     
+    
+    private let dontHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Login", for: .normal)
+        button.attributedTitle(firstPart: "Don't have an account?", secondPart: "Sign Up")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+         return button
+    }()
     
      //MARK: Lifecycle
     
@@ -74,21 +66,26 @@ class LoginController: UIViewController{
         configureUI()
     }
     
+     //MARK: Actions
+    
+    @objc func handleShowSignUp(){
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
+        
+        
+        print("Show signup here")
+    }
     
     
      //MARK: Helpers
     
     func configureUI(){
-        view.backgroundColor = .white
+        
+        configureGradientLayer()
+        
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
 
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
-        gradient.locations = [0, 1] //one start at the top, the other at the bottom
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.bounds
-        
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)
         iconImage.setDimensions(height: 80, width: 120)
@@ -110,7 +107,4 @@ class LoginController: UIViewController{
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
-    
-    
-    
 }
