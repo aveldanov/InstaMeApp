@@ -18,6 +18,34 @@ class RegistrationController: UIViewController{
         return button
     }()
     
+    private let emailTextField: UITextField = {
+        let textField = CustomTextField(placeholder: "Email")
+        textField.keyboardType = .emailAddress
+        return textField
+    }()
+    
+    
+    private let passwordTextField: UITextField = {
+        let textField = CustomTextField(placeholder: "Password")
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    
+    private let fullNameTextField: UITextField = CustomTextField(placeholder: "Fullname")
+    
+    
+    private let userNameTextField: UITextField = CustomTextField(placeholder: "Username")
+    
+    private let signUpButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.layer.cornerRadius = 5
+        button.setHeight(50)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        return button
+    }()
     
     //MARK: Lifecycle
     
@@ -36,6 +64,23 @@ class RegistrationController: UIViewController{
         plusPhotoButton.centerX(inView: view)
         plusPhotoButton.setDimensions(height: 140, width: 140)
         plusPhotoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
+        
+        let stack = UIStackView(arrangedSubviews: [emailTextField,
+                                                   passwordTextField,
+                                                   fullNameTextField,
+                                                   userNameTextField,
+                                                   signUpButton])
+        stack.axis = .vertical
+        stack.spacing = 20
+        
+        view.addSubview(stack)
+        stack.anchor(top: plusPhotoButton.bottomAnchor,
+                     left: view.leftAnchor,
+                     right: view.rightAnchor,
+                     paddingTop: 32,
+                     paddingLeft: 32,
+                     paddingRight: 32)
+        
     }
     
     

@@ -31,7 +31,6 @@ class LoginController: UIViewController{
         return textField
     }()
     
-    
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
@@ -58,8 +57,8 @@ class LoginController: UIViewController{
          return button
     }()
     
-     //MARK: Lifecycle
     
+     //MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +70,6 @@ class LoginController: UIViewController{
     @objc func handleShowSignUp(){
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
-        
         
         print("Show signup here")
     }
@@ -91,7 +89,10 @@ class LoginController: UIViewController{
         iconImage.setDimensions(height: 80, width: 120)
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         
-        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgotPasswordButton])
+        let stack = UIStackView(arrangedSubviews: [emailTextField,
+                                                   passwordTextField,
+                                                   loginButton,
+                                                   forgotPasswordButton])
         stack.axis = .vertical
         stack.spacing = 20
         
