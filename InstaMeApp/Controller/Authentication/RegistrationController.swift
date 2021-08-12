@@ -47,6 +47,13 @@ class RegistrationController: UIViewController{
         return button
     }()
     
+    private let alreadyHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.attributedTitle(firstPart: "Already have an account?", secondPart: "Login")
+        button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+         return button
+    }()
+    
     //MARK: Lifecycle
     
     
@@ -54,6 +61,15 @@ class RegistrationController: UIViewController{
         super.viewDidLoad()
         configureUI()
     }
+    
+    
+     //MARK: Actions
+    
+    @objc func handleShowLogin(){
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     
      //MARK: Helpers
     
