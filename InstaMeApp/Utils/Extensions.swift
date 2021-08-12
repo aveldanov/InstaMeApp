@@ -8,6 +8,17 @@
 import UIKit
 
 
+extension UIButton{
+    func attributedTitle(firstPart: String, secondPart: String){
+        
+    }
+    
+    
+}
+
+
+
+
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
