@@ -10,9 +10,13 @@ import UIKit
 
 class CustomTextField: UITextField{
     
-     init(placeholder: String) {
+    init(placeholder: String) {
         super.init(frame: .zero)
         
+        let spacer = UIView()
+        spacer.setDimensions(height: 50, width: 12)
+        leftView = spacer
+        leftViewMode = .always
         
         borderStyle = .none
         textColor = .white
