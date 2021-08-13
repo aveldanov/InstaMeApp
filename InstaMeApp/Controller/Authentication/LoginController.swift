@@ -12,7 +12,7 @@ class LoginController: UIViewController{
     
      //MARK: Properties
     
-    private let viewModel = LoginViewModel()
+    private var loginViewModel = LoginViewModel()
     
     private let iconImage: UIImageView = {
         let iconImage = UIImageView(image: #imageLiteral(resourceName: "instaMeAppLogo"))
@@ -64,6 +64,7 @@ class LoginController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNotificationObservers()
     }
     
      //MARK: Actions
@@ -73,6 +74,19 @@ class LoginController: UIViewController{
         navigationController?.pushViewController(controller, animated: true)
         
         print("Show signup here")
+    }
+    
+    
+    
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextField{
+            loginViewModel.email = sender.text
+        }else{
+            loginViewModel.password = sender.text
+        }
+        
+        print(loginViewModel.email, loginViewModel.password)
+        print(loginViewModel.formIsValid)
     }
     
     
@@ -109,4 +123,12 @@ class LoginController: UIViewController{
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
+    
+    
+    
+    func configureNotificationObservers(){
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+
 }
