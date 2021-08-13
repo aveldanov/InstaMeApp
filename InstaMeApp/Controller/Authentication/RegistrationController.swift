@@ -97,6 +97,11 @@ class RegistrationController: UIViewController{
                      paddingLeft: 32,
                      paddingRight: 32)
         
+        
+        view.addSubview(alreadyHaveAccountButton)
+        alreadyHaveAccountButton.centerX(inView: view)
+        alreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        
     }
     
     
