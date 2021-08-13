@@ -12,6 +12,8 @@ class LoginController: UIViewController{
     
      //MARK: Properties
     
+    private let viewModel = LoginViewModel()
+    
     private let iconImage: UIImageView = {
         let iconImage = UIImageView(image: #imageLiteral(resourceName: "instaMeAppLogo"))
         iconImage.contentMode = .scaleAspectFill
