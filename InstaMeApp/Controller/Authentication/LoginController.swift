@@ -73,7 +73,6 @@ class LoginController: UIViewController{
     @objc func handleShowSignUp(){
         let controller = RegistrationController()
         navigationController?.pushViewController(controller, animated: true)
-        
         print("Show signup here")
     }
     
