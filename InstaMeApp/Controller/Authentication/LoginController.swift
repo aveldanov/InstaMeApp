@@ -127,7 +127,6 @@ class LoginController: UIViewController{
     }
     
     
-    
     func configureNotificationObservers(){
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
