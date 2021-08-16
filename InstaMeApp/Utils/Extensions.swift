@@ -30,8 +30,6 @@ extension UIButton{
        attributedTitle.append(NSAttributedString(string: secondPart, attributes: boldAtts))
        setAttributedTitle(attributedTitle, for: .normal)
     }
-    
-    
 }
 
 
