@@ -13,7 +13,6 @@ protocol AuthenticationViewModel{
     var buttonTitleColor: UIColor { get }
 }
 
-
 struct LoginViewModel{
     var email: String?
     var password: String?
