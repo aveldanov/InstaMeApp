@@ -85,9 +85,7 @@ class LoginController: UIViewController{
             loginViewModel.password = sender.text
         }
         
-        loginButton.backgroundColor = loginViewModel.buttonBackgroundColor
-        loginButton.setTitleColor(loginViewModel.buttonTitleColor, for: .normal)
-        loginButton.isEnabled = loginViewModel.formIsValid
+        updateForm()
     }
     
     
@@ -131,4 +129,15 @@ class LoginController: UIViewController{
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
 
+}
+
+
+ //MARK: FormViewModel
+
+extension LoginController: FormViewModelProtocol{
+    func updateForm() {
+        loginButton.backgroundColor = loginViewModel.buttonBackgroundColor
+        loginButton.setTitleColor(loginViewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = loginViewModel.formIsValid
+    }
 }
