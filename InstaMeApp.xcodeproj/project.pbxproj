@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216E6AB926D1AF830087D98B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 216E6AB826D1AF830087D98B /* GoogleService-Info.plist */; };
 		219B82B926C22A0F0069D674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82B826C22A0F0069D674 /* AppDelegate.swift */; };
 		219B82BB26C22A0F0069D674 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82BA26C22A0F0069D674 /* SceneDelegate.swift */; };
 		219B82BD26C22A0F0069D674 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82BC26C22A0F0069D674 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		216E6AB826D1AF830087D98B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		219B82B526C22A0F0069D674 /* InstaMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219B82B826C22A0F0069D674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		219B82BA26C22A0F0069D674 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				219B82C126C22A120069D674 /* Assets.xcassets */,
 				219B82C326C22A120069D674 /* LaunchScreen.storyboard */,
 				219B82C626C22A120069D674 /* Info.plist */,
+				216E6AB826D1AF830087D98B /* GoogleService-Info.plist */,
 			);
 			path = InstaMeApp;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				219B82C526C22A120069D674 /* LaunchScreen.storyboard in Resources */,
+				216E6AB926D1AF830087D98B /* GoogleService-Info.plist in Resources */,
 				219B82C226C22A120069D674 /* Assets.xcassets in Resources */,
 				219B82C026C22A0F0069D674 /* Main.storyboard in Resources */,
 			);
