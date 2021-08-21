@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>147732017100-h1cgohgqdua70lg4moq0idbldb6avl6p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.147732017100-h1cgohgqdua70lg4moq0idbldb6avl6p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBDD2G48iHxgtb0ztAJqfti7X9QrRbz4iw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>147732017100</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aveldanov.InstaMeApp</string>
+	<key>PROJECT_ID</key>
+	<string>instameapp-baad7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instameapp-baad7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:147732017100:ios:b0b2c29eeb6f47f004f769</string>
+</dict>
+</plist>
