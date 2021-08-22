@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0DDA1088488EF8CD0A20AC71 /* Pods_InstaMeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CC33EA9B900DAF559FEB3B /* Pods_InstaMeApp.framework */; };
+		2120B1D626D1BD51002E6971 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B1D526D1BD51002E6971 /* ImageUploader.swift */; };
+		2120B1D826D1BD5E002E6971 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120B1D726D1BD5D002E6971 /* AuthService.swift */; };
 		216E6AB926D1AF830087D98B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 216E6AB826D1AF830087D98B /* GoogleService-Info.plist */; };
 		219B82B926C22A0F0069D674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82B826C22A0F0069D674 /* AppDelegate.swift */; };
 		219B82BB26C22A0F0069D674 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219B82BA26C22A0F0069D674 /* SceneDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2120B1D526D1BD51002E6971 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		2120B1D726D1BD5D002E6971 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		216E6AB826D1AF830087D98B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		219B82B526C22A0F0069D674 /* InstaMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		219B82B826C22A0F0069D674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				2FA073AB2F907832E1C31D03 /* Pods-InstaMeApp.debug.xcconfig */,
 				6F9AEAFA2A3D136D8DEBA0BA /* Pods-InstaMeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +161,8 @@
 		219B82D026C22B320069D674 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2120B1D526D1BD51002E6971 /* ImageUploader.swift */,
+				2120B1D726D1BD5D002E6971 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -198,7 +203,7 @@
 				219B82B126C22A0F0069D674 /* Sources */,
 				219B82B226C22A0F0069D674 /* Frameworks */,
 				219B82B326C22A0F0069D674 /* Resources */,
-				91710ACCCCC8507DC8B80715 /* [CP] Embed Pods Frameworks */,
+				44905662916D99CE75E21695 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +261,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44905662916D99CE75E21695 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7221B479B36E0F5EE6D0E281 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,23 +300,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91710ACCCCC8507DC8B80715 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -315,6 +320,8 @@
 				219B82D526C22CEF0069D674 /* FeedController.swift in Sources */,
 				219B82D326C22BC10069D674 /* MainTabController.swift in Sources */,
 				219B82E126C34F530069D674 /* Extensions.swift in Sources */,
+				2120B1D626D1BD51002E6971 /* ImageUploader.swift in Sources */,
+				2120B1D826D1BD5E002E6971 /* AuthService.swift in Sources */,
 				219B82BB26C22A0F0069D674 /* SceneDelegate.swift in Sources */,
 				219B82E626C38C890069D674 /* RegistrationController.swift in Sources */,
 			);

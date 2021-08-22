@@ -13,6 +13,9 @@ class RegistrationController: UIViewController{
     
     private var registrationViewModel = RegistrationViewModel()
     
+    private var profileImage: UIImage?
+    
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
@@ -43,10 +46,12 @@ class RegistrationController: UIViewController{
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1).withAlphaComponent(0.5)
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.isEnabled = false
         return button
     }()
     
@@ -62,12 +67,51 @@ class RegistrationController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+
         configureUI()
         configureNotificationObservers()
     }
     
     
      //MARK: Actions
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @objc func handleSignUp(){
+        guard let email = emailTextField.text else {
+            return
+        }
+        guard let password = passwordTextField.text else {
+            return
+        }
+        guard let fullname = fullNameTextField.text else {
+            return
+        }
+        guard let username = userNameTextField.text else {
+            return
+        }
+        guard let profileImage = profileImage else {
+            return
+        }
+        
+        let credentials = AuthCredentials(email: email,
+                                          password: password,
+                                          fullname: fullname,
+                                          username: username,
+                                          profileImage: profileImage)
+        
+        AuthService.registerUser(withCredentials: credentials)
+        
+    }
+    
+    
+    
     
     @objc func handleShowLogin(){
         navigationController?.popViewController(animated: true)
@@ -159,6 +203,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         guard let selectedImage = info[.editedImage] as? UIImage else {
             return
         }
+        profileImage = selectedImage
         
         // rounding the button itself
         plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width/2
@@ -172,3 +217,16 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
 
 
 }
+
+//
+//extension RegistrationController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tapGesture = UITapGestureRecognizer(target: self,
+//                         action: #selector(hideKeyboard))
+//        view.addGestureRecognizer(tapGesture)
+//    }
+//
+//    @objc func hideKeyboard() {
+//        view.endEditing(true)
+//    }
+//}
