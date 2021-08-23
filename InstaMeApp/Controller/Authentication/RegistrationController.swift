@@ -70,7 +70,6 @@ class RegistrationController: UIViewController{
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
 
-
         configureUI()
         configureNotificationObservers()
     }
