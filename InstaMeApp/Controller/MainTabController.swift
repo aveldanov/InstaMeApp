@@ -15,6 +15,8 @@ class MainTabController: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        view.backgroundColor = .red
         configureViewControllers()
     }
     
@@ -23,7 +25,7 @@ class MainTabController: UITabBarController{
     
     func configureViewControllers(){
         
-        view.backgroundColor = .white
+        view.backgroundColor = .red
 
         let feed = FeedController()
         
