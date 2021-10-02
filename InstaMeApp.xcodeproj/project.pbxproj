@@ -15,6 +15,12 @@
 		219B82C226C22A120069D674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 219B82C126C22A120069D674 /* Assets.xcassets */; };
 		219B82C526C22A120069D674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 219B82C326C22A120069D674 /* LaunchScreen.storyboard */; };
 		21AAA4E127081D3300DE623A /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4E027081D3300DE623A /* MainTabController.swift */; };
+		21AAA4E327081E8E00DE623A /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4E227081E8E00DE623A /* FeedController.swift */; };
+		21AAA4E527081E9900DE623A /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4E427081E9900DE623A /* SearchController.swift */; };
+		21AAA4E927081EC300DE623A /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4E827081EC300DE623A /* ImageSelectorController.swift */; };
+		21AAA4EB27081ED300DE623A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 21AAA4EA27081ED300DE623A /* README.md */; };
+		21AAA4ED27081EF900DE623A /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4EC27081EF900DE623A /* NotificationsController.swift */; };
+		21AAA4EF27081F0E00DE623A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AAA4EE27081F0E00DE623A /* ProfileController.swift */; };
 		31E321E3AD62D517F003A3CD /* Pods_InstaMeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D085E23D3E5F0A98402EC03A /* Pods_InstaMeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		219B82C426C22A120069D674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		219B82C626C22A120069D674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21AAA4E027081D3300DE623A /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		21AAA4E227081E8E00DE623A /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		21AAA4E427081E9900DE623A /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		21AAA4E827081EC300DE623A /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
+		21AAA4EA27081ED300DE623A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21AAA4EC27081EF900DE623A /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		21AAA4EE27081F0E00DE623A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		C6A3FCFA1C77A2D5CA7A608B /* Pods-InstaMeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMeApp.debug.xcconfig"; path = "Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D085E23D3E5F0A98402EC03A /* Pods_InstaMeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaMeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2ACB2CC0766E0E09A9E6FC1 /* Pods-InstaMeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaMeApp.release.xcconfig"; path = "Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +70,7 @@
 		219B82AC26C22A0F0069D674 = {
 			isa = PBXGroup;
 			children = (
+				21AAA4EA27081ED300DE623A /* README.md */,
 				219B82B726C22A0F0069D674 /* InstaMeApp */,
 				219B82B626C22A0F0069D674 /* Products */,
 				0BC826DBA71A52159BDCE386 /* Pods */,
@@ -120,6 +133,11 @@
 			children = (
 				219B82E226C38BA40069D674 /* Authentication */,
 				21AAA4E027081D3300DE623A /* MainTabController.swift */,
+				21AAA4E227081E8E00DE623A /* FeedController.swift */,
+				21AAA4E427081E9900DE623A /* SearchController.swift */,
+				21AAA4E827081EC300DE623A /* ImageSelectorController.swift */,
+				21AAA4EC27081EF900DE623A /* NotificationsController.swift */,
+				21AAA4EE27081F0E00DE623A /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 			files = (
 				219B82C526C22A120069D674 /* LaunchScreen.storyboard in Resources */,
 				216E6AB926D1AF830087D98B /* GoogleService-Info.plist in Resources */,
+				21AAA4EB27081ED300DE623A /* README.md in Resources */,
 				219B82C226C22A120069D674 /* Assets.xcassets in Resources */,
 				219B82C026C22A0F0069D674 /* Main.storyboard in Resources */,
 			);
@@ -269,7 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				219B82BD26C22A0F0069D674 /* ViewController.swift in Sources */,
+				21AAA4E927081EC300DE623A /* ImageSelectorController.swift in Sources */,
+				21AAA4ED27081EF900DE623A /* NotificationsController.swift in Sources */,
+				21AAA4E527081E9900DE623A /* SearchController.swift in Sources */,
 				219B82B926C22A0F0069D674 /* AppDelegate.swift in Sources */,
+				21AAA4EF27081F0E00DE623A /* ProfileController.swift in Sources */,
+				21AAA4E327081E8E00DE623A /* FeedController.swift in Sources */,
 				21AAA4E127081D3300DE623A /* MainTabController.swift in Sources */,
 				219B82BB26C22A0F0069D674 /* SceneDelegate.swift in Sources */,
 			);
