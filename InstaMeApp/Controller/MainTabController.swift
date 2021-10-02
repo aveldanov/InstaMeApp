@@ -15,8 +15,7 @@ class MainTabController: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .red
+        configureViewControllers()
     }
     
      //MARK: Helpers
@@ -24,6 +23,8 @@ class MainTabController: UITabBarController{
     
     func configureViewControllers(){
         
+        view.backgroundColor = .white
+
         let feed = FeedController()
         
         let search = SearchController()
