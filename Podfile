@@ -7,11 +7,11 @@ target 'InstaMeApp' do
 
   # Pods for InstaMeApp
 
-pod 'Firebase/Database'
-pod 'Firebase/Firestore'
-pod 'Firebase/Storage'
+#pod 'Firebase/Database'
+#pod 'Firebase/Firestore'
+#pod 'Firebase/Storage'
 # pod 'Firebase/Messaging'
-pod 'Firebase/Auth'
+#pod 'Firebase/Auth'
 
 #pod 'ActiveLabel'
 #pod 'SDWebImage', '~> 5.0'

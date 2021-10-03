@@ -9,7 +9,7 @@ import UIKit
 
 
 class MainTabController: UITabBarController{
-    
+    let imageView = UIImageView()
     
     //MARK: Lifecycle
 
@@ -25,9 +25,9 @@ class MainTabController: UITabBarController{
     
     func configureViewControllers(){
         
-        view.backgroundColor = .red
+        view.backgroundColor = .white
 
-        let feed = FeedController()
+        let feed = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage:#imageLiteral(resourceName: "home_selected"), rootViewController: FeedController())
         
         let search = SearchController()
         
@@ -40,6 +40,17 @@ class MainTabController: UITabBarController{
         
         viewControllers = [feed, search, imageSelector, notifications, profile]
         
+    }
+    
+    // helper
+    func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController{
+        
+        let nav = UINavigationController(rootViewController: rootViewController)
+        
+        nav.tabBarItem.image = unselectedImage
+        nav.tabBarItem.selectedImage = selectedImage
+        nav.navigationBar.tintColor = .black
+        return nav
     }
     
     

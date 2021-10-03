@@ -182,7 +182,6 @@
 				219B82B126C22A0F0069D674 /* Sources */,
 				219B82B226C22A0F0069D674 /* Frameworks */,
 				219B82B326C22A0F0069D674 /* Resources */,
-				AD05E8256DF20165F301AC58 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,23 +240,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AD05E8256DF20165F301AC58 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaMeApp/Pods-InstaMeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ECB0AD7FFC43B8AF710FB135 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
